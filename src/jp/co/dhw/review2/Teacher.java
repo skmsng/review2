@@ -1,11 +1,11 @@
-package jp.co.dhw.review2
+package jp.co.dhw.review2;
 
 public class Teacher extends User{
 	public String subject;
 
 	///初期化コンストラクタ
 	public Teacher(Integer id, String firstName, String lastName, String subject){
-		super(Integer id, String firstName, String lastName);
+		super(id, firstName, lastName);
 		this.subject = subject;
 	}
 

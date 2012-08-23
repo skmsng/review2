@@ -1,7 +1,6 @@
-package jp.co.dhw.review2
+package jp.co.dhw.review2;
 
-import java.lang
-import java.util
+import java.util.ArrayList;
 
 public class User{
 
@@ -24,7 +23,7 @@ public class User{
 	public static void main(String[] args){
 
 		//4のコード
-		Arraylist<User> list = new Arraylist<User>();
+		ArrayList<User> list = new ArrayList<User>();
 		list.add(new User(1, "憲隆", "武田"));
 		list.add(new User(2, "尭", "今田"));
 		list.add(new User(3, "真悟", "酒見"));
@@ -38,12 +37,13 @@ public class User{
 
 		for(User user : list){
 			System.out.println("id→" + user.id);
-			System.out.println("氏名→" + user.showName());
+			System.out.print("氏名→");
+			user.showName();
 		}
 
 
 		//7のコード
-		Arraylist<User> list2 = new Arraylist<User>();
+		ArrayList<User> list2 = new ArrayList<User>();
 		list2.add(new Student(1, "憲隆", "武田"));
 		list2.add(new Student(2, "尭", "今田"));
 		list2.add(new Student(3, "真悟", "酒見"));
@@ -76,9 +76,10 @@ public class User{
 		list2.add(new Teacher(107, "昇治", "渡部", "Web/アプリ"));
 
 		for(User user : list2){
-			System.out.println("氏名→" + user.showName());
+			System.out.print("氏名→");
+			user.showName();
 			
-			if(Teacher.instanceof(user)){
+			if(user instanceof Teacher){
 				System.out.println("教科→" + ((Teacher)user).getSubject());
 			}
 		}
